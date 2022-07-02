@@ -4,8 +4,8 @@ import com.lsiccha.semana12.application.dto.Externo;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.repositories.ProductoRepository;
 import com.lsiccha.semana12.domain.services.ProductoService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
@@ -18,14 +18,13 @@ import java.util.List;
 @Service
 public class ProductoServiceImpl implements ProductoService {
 
-    @Value("$(service.pets)")
+    @Value("${service.pets}")
     String servicioPets;
 
-    private final Logger logger;
+    protected final Log logger = LogFactory.getLog(getClass());
     private final ProductoRepository productoRepository;
 
     ProductoServiceImpl(ProductoRepository productoRepository){
-        this.logger = LoggerFactory.getLogger();
         this.productoRepository = productoRepository;
     }
 
@@ -59,7 +58,7 @@ public class ProductoServiceImpl implements ProductoService {
                 producto = new Producto();
                 producto.setId(item.getId());
                 producto.setDescripcion(item.getType());
-                producto.setPrecio(item.getPrice()*1+(Math.random()*6+1));
+                producto.setPrecio(item.getPrice()*1+(Math.random()*6+1)/10);
                 lista.add(producto);
                 System.out.println(producto.toString());
             }

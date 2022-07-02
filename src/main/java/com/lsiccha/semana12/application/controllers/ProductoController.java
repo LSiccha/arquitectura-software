@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@RequestMapping
 public interface ProductoController {
 
     @RequestMapping(value="/listar", produces = {"application/json"}, method = RequestMethod.GET)

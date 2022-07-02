@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 public class RespuestaProducto extends Respuesta {
 
-    @JsonProperty("data")
+    @JsonProperty("datos")
     List<Producto> data;
 }
