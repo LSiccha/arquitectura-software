@@ -38,7 +38,7 @@ public class ProductoServiceImpl implements ProductoService {
         //HttpEntity<Externo> entity = new HttpEntity<>(headers);
 
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.wait(1000);
+        //restTemplate.wait(1000);
 
         ResponseEntity<List<Externo>> response = restTemplate.exchange(
                 "http://petstore-demo-endpoint.execute-api.com/petstore/pets",

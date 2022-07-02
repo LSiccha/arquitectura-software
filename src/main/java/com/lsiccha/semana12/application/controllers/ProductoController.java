@@ -12,5 +12,8 @@ import java.util.List;
 public interface ProductoController {
 
     @RequestMapping(value="/listar", produces = {"application/json"}, method = RequestMethod.GET)
+    ResponseEntity<List<Producto>> listarProductos();
+
+    @GetMapping(value="/procesar", produces = {"application/json"})
     ResponseEntity<List<Producto>> listarDataProcesada() throws InterruptedException;
 }
