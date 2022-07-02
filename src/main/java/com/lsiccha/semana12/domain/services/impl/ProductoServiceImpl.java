@@ -2,23 +2,32 @@ package com.lsiccha.semana12.domain.services.impl;
 
 import com.lsiccha.semana12.application.dto.Externo;
 import com.lsiccha.semana12.domain.entities.Producto;
+import com.lsiccha.semana12.domain.repositories.ProductoRepository;
 import com.lsiccha.semana12.domain.services.ProductoService;
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class ProductoServiceImpl implements ProductoService {
 
     @Value("$(service.pets)")
     String servicioPets;
 
+    private Logger logger;
+    private ProductoRepository productoRepository;
+
     @Override
     public List<Producto> listar() {
-        return null;
+        return this.productoRepository.listar();
     }
 
     @Override
@@ -40,7 +49,8 @@ public class ProductoServiceImpl implements ProductoService {
 
         List<Producto> lista = new ArrayList<Producto>();
         Producto producto;
-        if (response.getStatusCode()==HttpStatus.OK){
+
+        if(response.getStatusCode()==HttpStatus.OK){
             for (Externo item: response.getBody()) {
                 producto = new Producto();
                 producto.setId(item.getId());
@@ -49,10 +59,12 @@ public class ProductoServiceImpl implements ProductoService {
                 lista.add(producto);
                 System.out.println(producto.toString());
             }
-            return new ResponseEntity<>(lista, HttpStatus.OK);
+            return lista;
         }
         else{
-            return new ResponseEntity<>(lista, HttpStatus.INTERNAL_SERVER_ERROR);
+            logger.error("Error en la respuesta del servicio invocado. Code: "+response.getStatusCode());
+            throw new InterruptedException("Error en la respuesta del servicio invocado. Code: "+response.getStatusCode());
         }
+
     }
 }
