@@ -8,4 +8,10 @@ public class Respuesta {
 
     @JsonProperty("satisfactorio")
     boolean satisfactorio;
+
+    @JsonProperty("codigo")
+    String codigo;
+
+    @JsonProperty("mensaje")
+    String mensaje;
 }

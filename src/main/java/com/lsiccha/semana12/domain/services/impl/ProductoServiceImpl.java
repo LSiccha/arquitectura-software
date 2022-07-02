@@ -4,8 +4,8 @@ import com.lsiccha.semana12.application.dto.Externo;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.repositories.ProductoRepository;
 import com.lsiccha.semana12.domain.services.ProductoService;
-import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
@@ -16,14 +16,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 public class ProductoServiceImpl implements ProductoService {
 
     @Value("$(service.pets)")
     String servicioPets;
 
-    private Logger logger;
-    private ProductoRepository productoRepository;
+    private final Logger logger;
+    private final ProductoRepository productoRepository;
+
+    ProductoServiceImpl(ProductoRepository productoRepository){
+        this.logger = LoggerFactory.getLogger();
+        this.productoRepository = productoRepository;
+    }
 
     @Override
     public List<Producto> listar() {
@@ -41,7 +45,7 @@ public class ProductoServiceImpl implements ProductoService {
         //restTemplate.wait(1000);
 
         ResponseEntity<List<Externo>> response = restTemplate.exchange(
-                "http://petstore-demo-endpoint.execute-api.com/petstore/pets",
+                servicioPets,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<Externo>>() {
