@@ -43,8 +43,8 @@ public class MyControllerImpl implements MyController{
             respuestaProducto.setSatisfactorio(false);
             respuestaProducto.setCodigo("99");
             respuestaProducto.setMensaje(msgerrorProceso);
-            return new ResponseEntity<>(respuestaProducto,HttpStatus.INTERNAL_SERVER_ERROR);        }
-
+            return new ResponseEntity<>(respuestaProducto,HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
 
