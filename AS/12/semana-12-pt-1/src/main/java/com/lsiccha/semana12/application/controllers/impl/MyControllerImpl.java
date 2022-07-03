@@ -1,5 +1,6 @@
-package com.lsiccha.semana12.application.controllers;
+package com.lsiccha.semana12.application.controllers.impl;
 
+import com.lsiccha.semana12.application.controllers.MyController;
 import com.lsiccha.semana12.application.dto.products.RespuestaProducto;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.services.MyService;
@@ -15,7 +16,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping(path="/filter")
-public class MyControllerImpl implements MyController{
+public class MyControllerImpl implements MyController {
 
     private MyService myService;
 

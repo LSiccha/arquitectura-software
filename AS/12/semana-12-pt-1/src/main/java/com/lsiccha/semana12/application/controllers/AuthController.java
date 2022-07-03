@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public interface AuthController {
 
-    @RequestMapping(value="/login", produces = {"application/json"}, method = RequestMethod.GET)
-    ResponseEntity<RespuestaAcceso> login(@RequestBody LoginDto creds);
+    @RequestMapping(value="/login", produces = {"application/json"}, method = RequestMethod.POST)
+    ResponseEntity<RespuestaAcceso> login(@RequestBody LoginDto creds) throws Exception;
 
 }

@@ -1,5 +1,6 @@
-package com.lsiccha.semana12.application.controllers;
+package com.lsiccha.semana12.application.controllers.impl;
 
+import com.lsiccha.semana12.application.controllers.ProductoController;
 import com.lsiccha.semana12.application.dto.products.RespuestaProducto;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.services.ProductoService;
