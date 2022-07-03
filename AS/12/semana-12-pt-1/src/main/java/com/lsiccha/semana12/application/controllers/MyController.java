@@ -1,6 +1,6 @@
 package com.lsiccha.semana12.application.controllers;
 
-import com.lsiccha.semana12.application.dto.RespuestaProducto;
+import com.lsiccha.semana12.application.dto.products.RespuestaProducto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,6 +1,6 @@
 package com.lsiccha.semana12.domain.services.impl;
 
-import com.lsiccha.semana12.application.dto.Externo;
+import com.lsiccha.semana12.application.dto.products.Externo;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.repositories.ProductoRepository;
 import com.lsiccha.semana12.domain.services.ProductoService;

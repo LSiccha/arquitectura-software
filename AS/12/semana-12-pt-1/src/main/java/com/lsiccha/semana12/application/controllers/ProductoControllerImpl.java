@@ -1,6 +1,6 @@
 package com.lsiccha.semana12.application.controllers;
 
-import com.lsiccha.semana12.application.dto.RespuestaProducto;
+import com.lsiccha.semana12.application.dto.products.RespuestaProducto;
 import com.lsiccha.semana12.domain.entities.Producto;
 import com.lsiccha.semana12.domain.services.ProductoService;
 import org.springframework.beans.factory.annotation.Value;

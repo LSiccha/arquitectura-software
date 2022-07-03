@@ -1,4 +1,4 @@
-package com.lsiccha.semana12.application.dto;
+package com.lsiccha.semana12.application.dto.products;
 
 import lombok.Data;
 
