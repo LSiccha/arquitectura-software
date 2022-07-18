@@ -1,0 +1,11 @@
+
+<nz-space></nz-space>
+<h2>Movie Detail</h2>
+<nz-space></nz-space>
+
+<div class="movie">
+  <h3>{{movie.name}}</h3>
+  <p>{{movie.description}}</p>
+  <p>{{movie.year}}</p>
+  <span>Stars: </span><span *ngFor="let star of [].constructor(movie.stars)">*</span>
+</div>

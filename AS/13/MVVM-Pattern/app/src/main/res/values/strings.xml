@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="heading">Patrón MVVM</string>
+    <string name="email_hint">Ingrese su Email: </string>
+    <string name="password_hint">Ingrese su Contraseña: </string>
+    <string name="button_text">Iniciar Sesión</string>
+</resources>
+

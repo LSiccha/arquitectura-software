@@ -1,0 +1,17 @@
+
+.header{
+  height: 400px;
+  color: white;
+}
+
+.footer{
+  height: 150px;
+  background-color: #041627;
+  color: white;
+}
+
+.main-content{
+  width: 800px;
+  height: 800px;
+  margin: auto;
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MVP - Semana 13</string>
+    <string name="action_settings">Settings</string>
+    <string name="buttonText">Mostrar siguiente componente</string>
+    <string name="heading">Patrón MVP</string>
+    <string name="subHeading">Arquitectura de Software - Semana 13</string>
+    <string name="description">Descripción de Componente</string>
+</resources>
+

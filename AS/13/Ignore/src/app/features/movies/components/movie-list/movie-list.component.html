@@ -1,0 +1,13 @@
+
+<nz-space></nz-space>
+<h2>List of Movies</h2>
+<nz-space></nz-space>
+<div class="table">
+  <ul>
+    <li *ngFor="let movie of movies">
+      <a routerLink="./detail/{{movie.id}}">
+        <span>{{movie.name}}</span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/VII Ciclo/AS/Repos/arquitectura-software/AS/13/MVVMPattern/app/src/main/res/layout/activity_main.xml" value="0.2188449848024316" />
+        <entry key="..\:/VII Ciclo/AS/Repos/arquitectura-software/AS/13/MVVMPattern/app/src/main/res/layout/fragment_first.xml" value="0.20364741641337386" />
+        <entry key="..\:/VII Ciclo/AS/Repos/arquitectura-software/AS/13/MVVMPattern/app/src/main/res/menu/menu_main.xml" value="0.2638888888888889" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
